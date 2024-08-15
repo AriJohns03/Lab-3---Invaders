@@ -28,6 +28,7 @@ namespace Lab_3___Invaders
         private PlayerShip playerShip;
         private List<Shot> playerShots;
         private List<Shot> invaderShots;
+        private List<Shot> hitShots;
 
         private PointF scoreLocation;
         private PointF livesLocation;
@@ -100,10 +101,16 @@ namespace Lab_3___Invaders
         {
             if (playerShots.Count < 2)
             {
-                Shot newShot = new Shot(
+                Point location = new Point((playerShip.Location.X + (playerShip.image.Width / 2)), playerShip.Location.Y);
+                Direction direction = Direction.Up;
+                Rectangle boundaries = formArea;
+                /*Shot newShot = new Shot(
                     new Point((playerShip.Location.X + (playerShip.image.Width / 2))
                         , playerShip.Location.Y),
                     Direction.Up, formArea);
+                */
+
+                Shot newShot = new Shot(location, direction, boundaries);
                 playerShots.Add(newShot);
             }
         }
@@ -246,6 +253,7 @@ namespace Lab_3___Invaders
             // removed from a list while enumerating through it
             List<Shot> deadPlayerShots = new List<Shot>();
             List<Shot> deadInvaderShots = new List<Shot>();
+            List<Shot> hitShots = new List<Shot>();
 
             foreach (Shot shot in invaderShots)
             {
@@ -275,7 +283,11 @@ namespace Lab_3___Invaders
                 }
                 foreach (Invader invader in deadInvaders)
                     invaders.Remove(invader);
+                
             }
+            // Added Foreach to check if bullet hit invader
+            foreach (Shot bullet in deadInvaderShots)
+                playerShots.Remove(bullet);
             foreach (Shot shot in deadPlayerShots)
                 playerShots.Remove(shot);
             foreach (Shot shot in deadInvaderShots)
@@ -295,6 +307,7 @@ namespace Lab_3___Invaders
                 framesSkipped = 0;
 
             int currentInvaderYSpace = 0;
+            // Double For Loop to create and add Space Invaders
             for (int x = 0; x < 5; x++)
             {
                 ShipType currentInvaderType = (ShipType)x;
@@ -306,6 +319,7 @@ namespace Lab_3___Invaders
                     Point newInvaderPoint =
                         new Point(currentInvaderXSpace, currentInvaderYSpace);
                     // Need to add more varied invader score values
+                    // Invaders have a hard code score value of 10
                     Invader newInvader =
                         new Invader(currentInvaderType, newInvaderPoint, 10);
                     invaders.Add(newInvader);
