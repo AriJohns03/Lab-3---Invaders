@@ -9,6 +9,7 @@ namespace Lab_3___Invaders
 {
     class Shot
     {
+        // Bullet Speed
         private const int moveInterval = 15;
         private const int width = 3;
         private const int height = 10;
@@ -26,6 +27,7 @@ namespace Lab_3___Invaders
             this.boundaries = boundaries;
         }
 
+        // Bullet Creation but not hit box
         public void Draw(Graphics graphics)
         {
             graphics.FillRectangle(Brushes.Red,
