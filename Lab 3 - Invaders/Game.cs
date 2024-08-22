@@ -275,6 +275,9 @@ namespace Lab_3___Invaders
                     // Checking for collision when the bomb explodes
                     if (playerShip.Area.Contains(shot.Location.X + shot.bombWidth, shot.Location.Y) || playerShip.Area.Contains(shot.Location.X - (shot.bombWidth / 2) + 15, shot.Location.Y))
                     {
+
+                        //TESTING TESTING
+
                         deadInvaderShots.Add(shot);
 
                         livesLeft--;
