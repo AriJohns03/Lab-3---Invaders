@@ -110,7 +110,7 @@ namespace Lab_3___Invaders
                     Direction.Up, formArea);
                 */
 
-                Shot newShot = new Shot(location, direction, boundaries);
+                Shot newShot = new Shot(location, direction, boundaries, shipType:ShipType.Player, false);
                 playerShots.Add(newShot);
             }
         }
@@ -242,7 +242,7 @@ namespace Lab_3___Invaders
             shooter.Location.Y + shooter.Area.Height);
 
             Shot newShot = new Shot(newShotLocation, Direction.Down,
-            formArea);
+            formArea, shooter.InvaderType, false);
             invaderShots.Add(newShot);
         }
 
@@ -254,19 +254,52 @@ namespace Lab_3___Invaders
             List<Shot> deadPlayerShots = new List<Shot>();
             List<Shot> deadInvaderShots = new List<Shot>();
             List<Shot> hitShots = new List<Shot>();
+            Shot bombShot = null;
 
             foreach (Shot shot in invaderShots)
             {
+                // Check if the shot is at the player level
+                // Check if the shot came from a bobmer type
+                // Check how long the bomb has been set off for
+                if ((shot.Location.Y > playerShip.Location.Y) && shot.shipType == ShipType.Bomber && shot.timer <= 0)
+                {
+                    Console.WriteLine("Got To Players Y Cords");
+                    deadInvaderShots.Add(shot);
+                    bombShot = new Shot(shot.Location, shot.direction, shot.boundaries, shot.shipType, true);
+                    //invaderShots.Add(bombShot);
+
+                }
+
+                if (shot.shipType == ShipType.Bomber)
+                {
+                    // Checking for collision when the bomb explodes
+                    if (playerShip.Area.Contains(shot.Location.X + shot.bombWidth, shot.Location.Y) || playerShip.Area.Contains(shot.Location.X - (shot.bombWidth / 2) + 15, shot.Location.Y))
+                    {
+                        deadInvaderShots.Add(shot);
+
+                        livesLeft--;
+                        playerShip.Alive = false;
+                        if (livesLeft == 0)
+                            GameOver(this, null);
+                    }
+                }
+
                 if (playerShip.Area.Contains(shot.Location))
                 {
                     deadInvaderShots.Add(shot);
+                    
                     livesLeft--;
                     playerShip.Alive = false;
                     if (livesLeft == 0)
                         GameOver(this, null);
                     // worth checking for gameOver state here too?
+                    // playerShip.Area.Contains(shot.Location.X + shot.bombWidth, shot.Location.Y) || playerShip.Area.Contains(shot.Location.X - (shot.bombWidth / 2), shot.Location.Y)
                 }
+
+
             }
+            
+            
 
             foreach (Shot shot in playerShots)
             {
@@ -292,6 +325,10 @@ namespace Lab_3___Invaders
                 playerShots.Remove(shot);
             foreach (Shot shot in deadInvaderShots)
                 invaderShots.Remove(shot);
+            if (bombShot != null)
+            {
+                invaderShots.Add(bombShot);
+            }
         }
 
         private void nextWave()
@@ -320,8 +357,19 @@ namespace Lab_3___Invaders
                         new Point(currentInvaderXSpace, currentInvaderYSpace);
                     // Need to add more varied invader score values
                     // Invaders have a hard code score value of 10
+
+                    // Adding the Bombers on the bottom part
+                    if(currentInvaderType == ShipType.Star & y == 0)
+                    {
+                        currentInvaderType = ShipType.Bomber;
+                    }
+                    if (currentInvaderType == ShipType.Star & y == 4)
+                    {
+                        currentInvaderType = ShipType.Bomber;
+                    }
                     Invader newInvader =
                         new Invader(currentInvaderType, newInvaderPoint, 10);
+                    currentInvaderType = (ShipType)x;
                     invaders.Add(newInvader);
                 }
             }
