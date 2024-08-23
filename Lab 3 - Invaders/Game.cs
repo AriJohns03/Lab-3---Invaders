@@ -35,7 +35,7 @@ namespace Lab_3___Invaders
 
         Font messageFont = new Font(FontFamily.GenericMonospace, 50, FontStyle.Bold);
         Font statsFont = new Font(FontFamily.GenericMonospace, 15);
-        
+
         public Game(Random random, Rectangle formArea)
         {
             this.formArea = formArea;
@@ -44,13 +44,13 @@ namespace Lab_3___Invaders
             scoreLocation = new PointF((formArea.Left + 5.0F), (formArea.Top + 5.0F));
             livesLocation = new PointF((formArea.Right - 120.0F), (formArea.Top + 5.0F));
             waveLocation = new PointF((formArea.Left + 5.0F), (formArea.Top + 25.0F));
-            playerShip = new PlayerShip(formArea, 
+            playerShip = new PlayerShip(formArea,
                 new Point((formArea.Width / 2), (formArea.Height - 50)));
             playerShots = new List<Shot>();
             invaderShots = new List<Shot>();
             invaders = new List<Invader>();
 
-            
+
             nextWave();
         }
 
@@ -58,7 +58,7 @@ namespace Lab_3___Invaders
         public void Draw(Graphics graphics, int frame, bool gameOver)
         {
             graphics.FillRectangle(Brushes.Black, formArea);
-            
+
             stars.Draw(graphics);
             foreach (Invader invader in invaders)
                 invader.Draw(graphics, frame);
@@ -68,7 +68,7 @@ namespace Lab_3___Invaders
             foreach (Shot shot in invaderShots)
                 shot.Draw(graphics);
 
-            graphics.DrawString(("Score: " + score.ToString()), 
+            graphics.DrawString(("Score: " + score.ToString()),
                 statsFont, Brushes.Yellow, scoreLocation);
             graphics.DrawString(("Lives: " + livesLeft.ToString()),
                 statsFont, Brushes.Yellow, livesLocation);
@@ -79,7 +79,7 @@ namespace Lab_3___Invaders
                 graphics.DrawString("GAME OVER", messageFont, Brushes.Red,
                     (formArea.Width / 4), formArea.Height / 3);
             }
-            
+
         }
 
         // Twinkle (animates stars) is called from the form animation timer
@@ -311,6 +311,11 @@ namespace Lab_3___Invaders
                     invaders.Add(newInvader);
                 }
             }
+        }
+
+        public void ShowLeaderboard (){
+
+
         }
 
         public event EventHandler GameOver;
