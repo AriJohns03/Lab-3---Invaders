@@ -166,7 +166,15 @@ namespace Lab_3___Invaders
                     {
                         invaderDirection = Direction.Left;
                         foreach (Invader invader in invaders)
-                            invader.Move(Direction.Down);
+                            if (invader.InvaderType == ShipType.TheBoss)
+                            {
+                                invader.Move(Direction.Left);
+                            }
+                            else
+                            {
+                                invader.Move(Direction.Down);
+                            }
+                        
                     }
                     else
                     {
@@ -185,8 +193,15 @@ namespace Lab_3___Invaders
                     {
                         invaderDirection = Direction.Right;
                         foreach (Invader invader in invaders)
-                            invader.Move(Direction.Down);
-                    }
+							if (invader.InvaderType == ShipType.TheBoss)
+							{
+								invader.Move(Direction.Left);
+							}
+							else
+							{
+								invader.Move(Direction.Down);
+							}
+					}
                     else
                     {
                         foreach (Invader invader in invaders)
@@ -338,45 +353,77 @@ namespace Lab_3___Invaders
         {
             wave++;
             invaderDirection = Direction.Right;
-            // if the wave is under 7, set frames skipped to 6 - current wave number
-            if (wave < 7)
+
+			if (wave < 7)
+			{
+				framesSkipped = 6 - wave;
+			}
+			else
+				framesSkipped = 0;
+
+            if (wave % 2 == 0)
             {
-                framesSkipped = 6 - wave;
+                BossWave();
             }
             else
-                framesSkipped = 0;
-
-            int currentInvaderYSpace = 0;
-            // Double For Loop to create and add Space Invaders
-            for (int x = 0; x < 5; x++)
             {
-                ShipType currentInvaderType = (ShipType)x;
-                currentInvaderYSpace += invaderYSpacing;
-                int currentInvaderXSpace = 0;
-                for (int y = 0; y < 5; y++)
-                {
-                    currentInvaderXSpace += invaderXSpacing;
-                    Point newInvaderPoint =
-                        new Point(currentInvaderXSpace, currentInvaderYSpace);
-                    // Need to add more varied invader score values
-                    // Invaders have a hard code score value of 10
 
-                    // Adding the Bombers on the bottom part
-                    if(currentInvaderType == ShipType.Star & y == 0)
+                // if the wave is under 7, set frames skipped to 6 - current wave number
+
+
+                int currentInvaderYSpace = 0;
+                // Double For Loop to create and add Space Invaders
+                for (int x = 0; x < 5; x++)
+                {
+                    ShipType currentInvaderType = (ShipType)x;
+                    currentInvaderYSpace += invaderYSpacing;
+                    int currentInvaderXSpace = 0;
+                    for (int y = 0; y < 5; y++)
                     {
-                        currentInvaderType = ShipType.Bomber;
+                        currentInvaderXSpace += invaderXSpacing;
+                        Point newInvaderPoint =
+                            new Point(currentInvaderXSpace, currentInvaderYSpace);
+                        // Need to add more varied invader score values
+                        // Invaders have a hard code score value of 10
+
+                        // Adding the Bombers on the bottom part
+                        if (currentInvaderType == ShipType.Star & y == 0)
+                        {
+                            currentInvaderType = ShipType.Bomber;
+                        }
+                        if (currentInvaderType == ShipType.Star & y == 4)
+                        {
+                            currentInvaderType = ShipType.Bomber;
+                        }
+                        Invader newInvader =
+                            new Invader(currentInvaderType, newInvaderPoint, 10);
+                        currentInvaderType = (ShipType)x;
+                        invaders.Add(newInvader);
                     }
-                    if (currentInvaderType == ShipType.Star & y == 4)
-                    {
-                        currentInvaderType = ShipType.Bomber;
-                    }
-                    Invader newInvader =
-                        new Invader(currentInvaderType, newInvaderPoint, 10);
-                    currentInvaderType = (ShipType)x;
-                    invaders.Add(newInvader);
                 }
             }
         }
+
+        public void BossWave()
+        {
+			int currentInvaderYSpace = 0;
+
+			ShipType currentInvaderType = (ShipType)0;
+
+			currentInvaderYSpace += 0;
+			int currentInvaderXSpace = 100;
+
+			Point newInvaderPoint =
+						new Point(currentInvaderXSpace, currentInvaderYSpace);
+
+			currentInvaderType = ShipType.TheBoss;
+
+			Invader newInvader =
+						new Invader(currentInvaderType, newInvaderPoint, 100);
+			currentInvaderType = (ShipType)0;
+			invaders.Add(newInvader);
+		}
+
 
         public event EventHandler GameOver;
     }

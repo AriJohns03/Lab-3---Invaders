@@ -14,6 +14,7 @@ namespace Lab_3___Invaders
         Star,
         Bomber,
         Dropper,
+        TheBoss,
         Player
     }
 }
