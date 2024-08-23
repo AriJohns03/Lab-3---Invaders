@@ -1,26 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\PRO250\\Lab-3---Invaders\\",
+  "WorkspaceRootPath": "C:\\Users\\jjanzig\\source\\repos\\ExistingCode\\Lab-3---Invaders\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{908DD367-E004-45CF-A91B-04AE44B65C15}|Lab 3 - Invaders\\Lab 3 - Invaders.csproj|c:\\pro250\\lab-3---invaders\\lab 3 - invaders\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{908DD367-E004-45CF-A91B-04AE44B65C15}|Lab 3 - Invaders\\Lab 3 - Invaders.csproj|c:\\users\\jjanzig\\source\\repos\\existingcode\\lab-3---invaders\\lab 3 - invaders\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{908DD367-E004-45CF-A91B-04AE44B65C15}|Lab 3 - Invaders\\Lab 3 - Invaders.csproj|solutionrelative:lab 3 - invaders\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{908DD367-E004-45CF-A91B-04AE44B65C15}|Lab 3 - Invaders\\Lab 3 - Invaders.csproj|C:\\PRO250\\Lab-3---Invaders\\lab 3 - invaders\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{908DD367-E004-45CF-A91B-04AE44B65C15}|Lab 3 - Invaders\\Lab 3 - Invaders.csproj|solutionrelative:lab 3 - invaders\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{908DD367-E004-45CF-A91B-04AE44B65C15}|Lab 3 - Invaders\\Lab 3 - Invaders.csproj|c:\\users\\jjanzig\\source\\repos\\existingcode\\lab-3---invaders\\lab 3 - invaders\\invader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{908DD367-E004-45CF-A91B-04AE44B65C15}|Lab 3 - Invaders\\Lab 3 - Invaders.csproj|solutionrelative:lab 3 - invaders\\invader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{908DD367-E004-45CF-A91B-04AE44B65C15}|Lab 3 - Invaders\\Lab 3 - Invaders.csproj|C:\\PRO250\\Lab-3---Invaders\\lab 3 - invaders\\leaderboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{908DD367-E004-45CF-A91B-04AE44B65C15}|Lab 3 - Invaders\\Lab 3 - Invaders.csproj|solutionrelative:lab 3 - invaders\\leaderboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{908DD367-E004-45CF-A91B-04AE44B65C15}|Lab 3 - Invaders\\Lab 3 - Invaders.csproj|C:\\Users\\jjanzig\\source\\repos\\ExistingCode\\Lab-3---Invaders\\lab 3 - invaders\\shot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{908DD367-E004-45CF-A91B-04AE44B65C15}|Lab 3 - Invaders\\Lab 3 - Invaders.csproj|solutionrelative:lab 3 - invaders\\shot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{908DD367-E004-45CF-A91B-04AE44B65C15}|Lab 3 - Invaders\\Lab 3 - Invaders.csproj|C:\\PRO250\\Lab-3---Invaders\\lab 3 - invaders\\leaderboardform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{908DD367-E004-45CF-A91B-04AE44B65C15}|Lab 3 - Invaders\\Lab 3 - Invaders.csproj|solutionrelative:lab 3 - invaders\\leaderboardform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{908DD367-E004-45CF-A91B-04AE44B65C15}|Lab 3 - Invaders\\Lab 3 - Invaders.csproj|C:\\Users\\jjanzig\\source\\repos\\ExistingCode\\Lab-3---Invaders\\lab 3 - invaders\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{908DD367-E004-45CF-A91B-04AE44B65C15}|Lab 3 - Invaders\\Lab 3 - Invaders.csproj|solutionrelative:lab 3 - invaders\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{908DD367-E004-45CF-A91B-04AE44B65C15}|Lab 3 - Invaders\\Lab 3 - Invaders.csproj|C:\\PRO250\\Lab-3---Invaders\\lab 3 - invaders\\leaderboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{908DD367-E004-45CF-A91B-04AE44B65C15}|Lab 3 - Invaders\\Lab 3 - Invaders.csproj|solutionrelative:lab 3 - invaders\\leaderboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{908DD367-E004-45CF-A91B-04AE44B65C15}|Lab 3 - Invaders\\Lab 3 - Invaders.csproj|c:\\users\\jjanzig\\source\\repos\\existingcode\\lab-3---invaders\\lab 3 - invaders\\shiptype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{908DD367-E004-45CF-A91B-04AE44B65C15}|Lab 3 - Invaders\\Lab 3 - Invaders.csproj|solutionrelative:lab 3 - invaders\\shiptype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,69 +30,75 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LeaderBoardForm.Designer.cs",
-              "DocumentMoniker": "C:\\PRO250\\Lab-3---Invaders\\Lab 3 - Invaders\\LeaderBoardForm.Designer.cs",
-              "RelativeDocumentMoniker": "Lab 3 - Invaders\\LeaderBoardForm.Designer.cs",
-              "ToolTip": "C:\\PRO250\\Lab-3---Invaders\\Lab 3 - Invaders\\LeaderBoardForm.Designer.cs",
-              "RelativeToolTip": "Lab 3 - Invaders\\LeaderBoardForm.Designer.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAgwDkAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-15T00:18:52.147Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "LeaderBoardForm.cs",
-              "DocumentMoniker": "C:\\PRO250\\Lab-3---Invaders\\Lab 3 - Invaders\\LeaderBoardForm.cs",
-              "RelativeDocumentMoniker": "Lab 3 - Invaders\\LeaderBoardForm.cs",
-              "ToolTip": "C:\\PRO250\\Lab-3---Invaders\\Lab 3 - Invaders\\LeaderBoardForm.cs",
-              "RelativeToolTip": "Lab 3 - Invaders\\LeaderBoardForm.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAQwBIAAAAAAAAA",
+              "Title": "ShipType.cs",
+              "DocumentMoniker": "C:\\Users\\jjanzig\\source\\repos\\ExistingCode\\Lab-3---Invaders\\Lab 3 - Invaders\\ShipType.cs",
+              "RelativeDocumentMoniker": "Lab 3 - Invaders\\ShipType.cs",
+              "ToolTip": "C:\\Users\\jjanzig\\source\\repos\\ExistingCode\\Lab-3---Invaders\\Lab 3 - Invaders\\ShipType.cs",
+              "RelativeToolTip": "Lab 3 - Invaders\\ShipType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-15T00:18:02.447Z",
+              "WhenOpened": "2024-08-23T00:41:15.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Invader.cs",
+              "DocumentMoniker": "C:\\Users\\jjanzig\\source\\repos\\ExistingCode\\Lab-3---Invaders\\Lab 3 - Invaders\\Invader.cs",
+              "RelativeDocumentMoniker": "Lab 3 - Invaders\\Invader.cs",
+              "ToolTip": "C:\\Users\\jjanzig\\source\\repos\\ExistingCode\\Lab-3---Invaders\\Lab 3 - Invaders\\Invader.cs",
+              "RelativeToolTip": "Lab 3 - Invaders\\Invader.cs",
+              "ViewState": "AQIAADUAAAAAAAAAAAAswAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-23T00:36:57.121Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "LeaderBoardForm.cs [Design]",
-              "DocumentMoniker": "C:\\PRO250\\Lab-3---Invaders\\Lab 3 - Invaders\\LeaderBoardForm.cs",
-              "RelativeDocumentMoniker": "Lab 3 - Invaders\\LeaderBoardForm.cs",
-              "ToolTip": "C:\\PRO250\\Lab-3---Invaders\\Lab 3 - Invaders\\LeaderBoardForm.cs [Design]",
-              "RelativeToolTip": "Lab 3 - Invaders\\LeaderBoardForm.cs [Design]",
+              "Title": "Shot.cs",
+              "DocumentMoniker": "C:\\Users\\jjanzig\\source\\repos\\ExistingCode\\Lab-3---Invaders\\Lab 3 - Invaders\\Shot.cs",
+              "RelativeDocumentMoniker": "Lab 3 - Invaders\\Shot.cs",
+              "ToolTip": "C:\\Users\\jjanzig\\source\\repos\\ExistingCode\\Lab-3---Invaders\\Lab 3 - Invaders\\Shot.cs",
+              "RelativeToolTip": "Lab 3 - Invaders\\Shot.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-15T00:12:19.06Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-08-22T01:34:55.791Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\PRO250\\Lab-3---Invaders\\Lab 3 - Invaders\\Form1.cs",
-              "RelativeDocumentMoniker": "Lab 3 - Invaders\\Form1.cs",
-              "ToolTip": "C:\\PRO250\\Lab-3---Invaders\\Lab 3 - Invaders\\Form1.cs [Design]",
-              "RelativeToolTip": "Lab 3 - Invaders\\Form1.cs [Design]",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\jjanzig\\source\\repos\\ExistingCode\\Lab-3---Invaders\\Lab 3 - Invaders\\Program.cs",
+              "RelativeDocumentMoniker": "Lab 3 - Invaders\\Program.cs",
+              "ToolTip": "C:\\Users\\jjanzig\\source\\repos\\ExistingCode\\Lab-3---Invaders\\Lab 3 - Invaders\\Program.cs",
+              "RelativeToolTip": "Lab 3 - Invaders\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-15T00:07:55.95Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-08-22T01:34:53.502Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Game.cs",
-              "DocumentMoniker": "C:\\PRO250\\Lab-3---Invaders\\Lab 3 - Invaders\\Game.cs",
+              "DocumentMoniker": "C:\\Users\\jjanzig\\source\\repos\\ExistingCode\\Lab-3---Invaders\\Lab 3 - Invaders\\Game.cs",
               "RelativeDocumentMoniker": "Lab 3 - Invaders\\Game.cs",
-              "ToolTip": "C:\\PRO250\\Lab-3---Invaders\\Lab 3 - Invaders\\Game.cs",
-              "RelativeToolTip": "Lab 3 - Invaders\\Game.cs",
-              "ViewState": "AQIAAEYAAAAAAAAAAADwvzsBAAAjAAAA",
+              "ToolTip": "C:\\Users\\jjanzig\\source\\repos\\ExistingCode\\Lab-3---Invaders\\Lab 3 - Invaders\\Game.cs*",
+              "RelativeToolTip": "Lab 3 - Invaders\\Game.cs*",
+              "ViewState": "AQIAAI4BAAAAAAAAAAAUwJwBAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-15T00:07:20.852Z",
+              "WhenOpened": "2024-08-22T01:34:51.082Z",
               "EditorCaption": ""
             }
           ]
