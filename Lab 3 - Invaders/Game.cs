@@ -142,7 +142,7 @@ namespace Lab_3___Invaders
                 {
                     if (dropper.InvaderType == ShipType.Dropper)
                     {
-                        dropper.Attack(formArea.Width, playerShip.Location.Y, playerShip.Location.X);
+                        dropper.DropperAttack(formArea.Width, playerShip.Location.Y, playerShip.Location.X);
                     }
                 }
 
@@ -337,6 +337,19 @@ namespace Lab_3___Invaders
             {
                 invaderShots.Add(bombShot);
             }
+
+            foreach (Invader invaderAttack in invaders)
+            {
+                if (playerShip.Area.Contains(invaderAttack.Location))
+                {
+                    
+                    livesLeft--;
+                    playerShip.Alive = false;
+                    if (livesLeft == 0)
+                        GameOver(this, null);
+                }
+            }
+
         }
 
         private void nextWave()

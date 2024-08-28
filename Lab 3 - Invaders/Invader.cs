@@ -72,7 +72,7 @@ namespace Lab_3___Invaders
 
         }
 
-        public void Attack(int formWidth, int playerLocationY, int playerLocationX)
+        public void DropperAttack(int formWidth, int playerLocationY, int playerLocationX)
         {
             if (side == "Left")
             {
@@ -109,9 +109,6 @@ namespace Lab_3___Invaders
                 //{
                 //    Location = new Point(Location.X, (Location.Y - verticalInterval));
                 //}
-
-
-
             }
 
             if (side == "Right")
