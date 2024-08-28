@@ -96,6 +96,7 @@ namespace Lab_3___Invaders
         {
             gameTimer.Stop();
             gameOver = true;
+            game.Go();
             Invalidate();
         }
 

@@ -1,6 +1,6 @@
 ﻿namespace Lab_3___Invaders
 {
-	partial class HomePage
+	partial class HomePageForm
 	{
 		/// <summary>
 		/// Required designer variable.

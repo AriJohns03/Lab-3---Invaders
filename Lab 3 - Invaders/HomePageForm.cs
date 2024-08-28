@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Lab_3___Invaders
 {
-	public partial class HomePage : Form
+	public partial class HomePageForm : Form
 	{
 		private Game game;
 		public int Frame = 0;
 		public Rectangle FormArea { get { return this.ClientRectangle; } }
 		Random random = new Random();
 
-		public HomePage()
+		public HomePageForm()
 		{
 			InitializeComponent();
 			game = new Game(random, FormArea);

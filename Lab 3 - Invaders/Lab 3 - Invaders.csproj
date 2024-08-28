@@ -58,11 +58,11 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Game.cs" />
-    <Compile Include="HomePage.cs">
+    <Compile Include="HomePageForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HomePage.Designer.cs">
-      <DependentUpon>HomePage.cs</DependentUpon>
+    <Compile Include="HomePageForm.Designer.cs">
+      <DependentUpon>HomePageForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Invader.cs" />
     <Compile Include="LeaderBoardForm.cs">
@@ -70,6 +70,12 @@
     </Compile>
     <Compile Include="LeaderBoardForm.Designer.cs">
       <DependentUpon>LeaderBoardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NicknameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NicknameForm.Designer.cs">
+      <DependentUpon>NicknameForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PlayerShip.cs" />
     <Compile Include="Program.cs" />
@@ -81,11 +87,14 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-	  <EmbeddedResource Include="LeaderBoardForm.resx">
-		  <DependentUpon>LeaderBoardForm.cs</DependentUpon>
-	  </EmbeddedResource>
-    <EmbeddedResource Include="HomePage.resx">
-      <DependentUpon>HomePage.cs</DependentUpon>
+    <EmbeddedResource Include="LeaderBoardForm.resx">
+      <DependentUpon>LeaderBoardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePageForm.resx">
+      <DependentUpon>HomePageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NicknameForm.resx">
+      <DependentUpon>NicknameForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

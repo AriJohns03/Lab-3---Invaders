@@ -16,5 +16,13 @@ namespace Lab_3___Invaders
 		{
 			InitializeComponent();
 		}
-	}
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            HomePageForm homePage = new HomePageForm();
+            homePage.Closed += (s, args) => this.Close();
+            homePage.Show();
+        }
+    }
 }

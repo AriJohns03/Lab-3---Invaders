@@ -20,6 +20,8 @@
 			base.Dispose(disposing);
 		}
 
+
+
 		#region Windows Form Designer generated code
 
 		/// <summary>
@@ -28,28 +30,17 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-            this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(-5, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(817, 462);
-            this.panel1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Impact", 20F, System.Drawing.FontStyle.Underline);
             this.label1.ForeColor = System.Drawing.Color.Yellow;
-            this.label1.Location = new System.Drawing.Point(283, 40);
+            this.label1.Location = new System.Drawing.Point(406, 56);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(20);
             this.label1.Size = new System.Drawing.Size(266, 88);
@@ -60,31 +51,46 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Yellow;
-            this.label2.Location = new System.Drawing.Point(218, 148);
+            this.label2.Location = new System.Drawing.Point(327, 201);
             this.label2.MinimumSize = new System.Drawing.Size(400, 200);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(400, 200);
             this.label2.TabIndex = 1;
             this.label2.Text = "Scores";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.Font = new System.Drawing.Font("Stencil", 12F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(414, 484);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(251, 69);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Return Home";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // LeaderBoardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel1);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(1068, 683);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Name = "LeaderBoardForm";
             this.Text = "LeaderBoardForm";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
 		}
 
-		#endregion
+        #endregion
 
-		private System.Windows.Forms.Panel panel1;
-		private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
     }
 }
