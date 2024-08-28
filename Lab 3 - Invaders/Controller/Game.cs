@@ -87,7 +87,11 @@ namespace Lab_3___Invaders
 
                 if (!scoreSaved)
                 {
-                    File.AppendAllText("C:\\Users\\jjanzig\\source\\repos\\ExistingCode\\Lab-3---Invaders\\Lab 3 - Invaders\\Leaderboard\\LeadeBoard.txt", "UserName: " + score);
+                    List<string> topPlayers = File.ReadAllLines("C:\\Users\\jjanzig\\source\\repos\\ExistingCode\\Lab-3---Invaders\\Lab 3 - Invaders\\Leaderboard\\LeadeBoard.txt").ToList();
+                    topPlayers.Add("UserName: " + score);
+                    topPlayers.Sort();
+       
+                    File.WriteAllLines("C:\\Users\\jjanzig\\source\\repos\\ExistingCode\\Lab-3---Invaders\\Lab 3 - Invaders\\Leaderboard\\LeadeBoard.txt", topPlayers);
                     scoreSaved = true;
                 }
 
@@ -99,6 +103,33 @@ namespace Lab_3___Invaders
             
 
         }
+
+        //public List<string> sortLeaderboard(List<string> playerList)
+        //{
+        //    List<int> ranking = new List<int>();
+        //    List<string> newRank = new List<string>();
+        //    foreach (string player in playerList)
+        //    {
+        //        string[] parts = player.Split(' ');
+        //        int highScore = int.Parse(parts[1]);
+        //        ranking.Add(highScore);
+        //    }
+        //    ranking.Sort();
+
+        //    for (int i = ranking.Count, j = 0; i > 0; i--, j++)
+        //    {
+        //        if (playerList[j].Contains(ranking[i] + ""))
+        //        {
+        //            newRank.Add(playerList[j]);
+        //        }
+        //        else
+        //        {
+        //            newRank.Add(playerList[i]);
+        //        }
+        //    }
+        //    return newRank;
+
+        //}
 
         // Twinkle (animates stars) is called from the form animation timer
         public void Twinkle()
