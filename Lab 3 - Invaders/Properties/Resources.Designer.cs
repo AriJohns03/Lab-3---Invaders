@@ -63,20 +63,23 @@ namespace Lab_3___Invaders.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap boss {
-            get {
-                object obj = ResourceManager.GetObject("boss", resourceCulture);
-				return ((System.Drawing.Bitmap)(obj));
-			}
-        
-        }
-        
         internal static System.Drawing.Bitmap bomber2 {
             get {
                 object obj = ResourceManager.GetObject("bomber2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap boss {
+            get {
+                object obj = ResourceManager.GetObject("boss", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -113,6 +116,26 @@ namespace Lab_3___Invaders.Properties {
         internal static System.Drawing.Bitmap bug4 {
             get {
                 object obj = ResourceManager.GetObject("bug4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cuttleFishPt11 {
+            get {
+                object obj = ResourceManager.GetObject("cuttleFishPt11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cuttleFishPt2 {
+            get {
+                object obj = ResourceManager.GetObject("cuttleFishPt2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

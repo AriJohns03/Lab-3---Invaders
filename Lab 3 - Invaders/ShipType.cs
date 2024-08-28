@@ -15,6 +15,7 @@ namespace Lab_3___Invaders
         Bomber,
         Dropper,
         TheBoss,
-        Player
+        Player, 
+        CuttleFish
     }
 }

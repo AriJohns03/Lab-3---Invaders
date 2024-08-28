@@ -122,6 +122,12 @@ namespace Lab_3___Invaders
 					imageArray[2] = Properties.Resources.boss;
 					imageArray[3] = Properties.Resources.boss;
 					break;
+                case ShipType.CuttleFish:
+					imageArray[0] = Properties.Resources.cuttleFishPt11;
+					imageArray[1] = Properties.Resources.cuttleFishPt11;
+					imageArray[2] = Properties.Resources.cuttleFishPt2;
+					imageArray[3] = Properties.Resources.cuttleFishPt2;
+					break;
 			}
         }
     }

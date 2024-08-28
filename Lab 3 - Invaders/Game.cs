@@ -5,6 +5,7 @@ using System.Text;
 using System.Drawing;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Diagnostics.Eventing.Reader;
 
 namespace Lab_3___Invaders
 {
@@ -315,6 +316,16 @@ namespace Lab_3___Invaders
                     }
                 }
 
+                if (shot.shipType == ShipType.CuttleFish) {
+                    if (playerShip.Area.Contains(shot.Location))
+                    {
+                        livesLeft--;
+                        playerShip.Alive = false;
+                        if (livesLeft == 0)
+                            GameOver(this, null);
+                    }
+                }
+
                 if (playerShip.Area.Contains(shot.Location))
                 {
                     deadInvaderShots.Add(shot);
@@ -326,12 +337,8 @@ namespace Lab_3___Invaders
                     // worth checking for gameOver state here too?
                     // playerShip.Area.Contains(shot.Location.X + shot.bombWidth, shot.Location.Y) || playerShip.Area.Contains(shot.Location.X - (shot.bombWidth / 2), shot.Location.Y)
                 }
-
-
             }
             
-            
-
             foreach (Shot shot in playerShots)
             {
                 List<Invader> deadInvaders = new List<Invader>();
@@ -339,34 +346,39 @@ namespace Lab_3___Invaders
                 {
                     if (invader.Area.Contains(shot.Location))
                     {
-                        if(!(invader.InvaderType == ShipType.TheBoss))
+                        if (!(invader.InvaderType == ShipType.TheBoss))
                         {
-							deadInvaders.Add(invader);
-							deadInvaderShots.Add(shot);
-							// Score multiplier based on wave
-							score = score + (1 * wave);
+                            deadInvaders.Add(invader);
+                            deadInvaderShots.Add(shot);
+                            // Score multiplier based on wave
+                            score = score + (1 * wave);
+                        }
+                        else if (!(invader.InvaderType == ShipType.CuttleFish))
+                        {
+                            deadInvaders.Add(invader);
+                            deadInvaderShots.Add(shot);
+                            score = score + 30;
                         }
                         else
                         {
-                            if(bossHealth == 0)
+                            if (bossHealth == 0)
                             {
                                 deadInvaders.Add(invader);
-								deadInvaderShots.Add(shot);
-								score = score + (50 * wave);
-								bossHealth = 10;
+                                deadInvaderShots.Add(shot);
+                                score = score + (50 * wave);
+                                bossHealth = 10;
                             }
                             else
                             {
                                 bossHealth--;
                                 deadInvaderShots.Add(shot);
                             }
-                        }
+                        } 
                         
                     }
                 }
                 foreach (Invader invader in deadInvaders)
                     invaders.Remove(invader);
-                
             }
             // Added Foreach to check if bullet hit invader
             foreach (Shot bullet in deadInvaderShots)
@@ -426,7 +438,6 @@ namespace Lab_3___Invaders
                             new Point(currentInvaderXSpace, currentInvaderYSpace);
                         // Need to add more varied invader score values
                         // Invaders have a hard code score value of 10
-
                         // Adding the Bombers on the bottom part
                         if (currentInvaderType == ShipType.Star & y == 0)
                         {
@@ -435,6 +446,14 @@ namespace Lab_3___Invaders
                         if (currentInvaderType == ShipType.Star & y == 4)
                         {
                             currentInvaderType = ShipType.Bomber;
+                        }
+                        if (currentInvaderType == ShipType.Saucer & y == 1 & x == 1)
+                        {
+                            currentInvaderType = ShipType.CuttleFish;
+                        }
+                        if (currentInvaderType == ShipType.Saucer & y == 3 & x == 1)
+                        {
+                            currentInvaderType = ShipType.CuttleFish;
                         }
                         Invader newInvader =
                             new Invader(currentInvaderType, newInvaderPoint, 10);
@@ -464,7 +483,7 @@ namespace Lab_3___Invaders
 			currentInvaderType = (ShipType)0;
 			invaders.Add(newInvader);
 		}
-
+       
 
         public event EventHandler GameOver;
     }
