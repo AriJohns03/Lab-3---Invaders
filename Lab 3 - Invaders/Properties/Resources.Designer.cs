@@ -66,7 +66,8 @@ namespace Lab_3___Invaders.Properties {
         internal static System.Drawing.Bitmap boss {
             get {
                 object obj = ResourceManager.GetObject("boss", resourceCulture);
-                }
+				return ((System.Drawing.Bitmap)(obj));
+			}
         
         }
         

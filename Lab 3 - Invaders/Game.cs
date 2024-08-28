@@ -381,6 +381,17 @@ namespace Lab_3___Invaders
             }
         }
 
+        public bool isBossWave(int currentWave)
+        {
+            if (currentWave % 2 == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         private void nextWave()
         {
             wave++;
@@ -393,7 +404,7 @@ namespace Lab_3___Invaders
 			else
 				framesSkipped = 0;
 
-            if (wave % 2 == 0)
+            if (isBossWave(wave))
             {
                 BossWave();
             }
