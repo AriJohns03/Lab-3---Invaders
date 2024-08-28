@@ -66,10 +66,16 @@ namespace Lab_3___Invaders.Properties {
         internal static System.Drawing.Bitmap boss {
             get {
                 object obj = ResourceManager.GetObject("boss", resourceCulture);
+                }
+        
+        }
+        
+        internal static System.Drawing.Bitmap bomber2 {
+            get {
+                object obj = ResourceManager.GetObject("bomber2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
