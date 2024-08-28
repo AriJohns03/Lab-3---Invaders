@@ -311,6 +311,7 @@ namespace Lab_3___Invaders
 
             foreach (Shot shot in playerShots)
             {
+
                 List<Invader> deadInvaders = new List<Invader>();
                 foreach (Invader invader in invaders)
                 {
