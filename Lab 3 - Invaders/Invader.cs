@@ -118,10 +118,10 @@ namespace Lab_3___Invaders
                     imageArray[3] = Properties.Resources.spaceship1;
                     break;
 				case ShipType.TheBoss:
-					imageArray[0] = Properties.Resources.spaceship1;
-					imageArray[1] = Properties.Resources.spaceship1;
-					imageArray[2] = Properties.Resources.spaceship1;
-					imageArray[3] = Properties.Resources.spaceship1;
+					imageArray[0] = Properties.Resources.boss;
+					imageArray[1] = Properties.Resources.boss;
+					imageArray[2] = Properties.Resources.boss;
+					imageArray[3] = Properties.Resources.boss;
 					break;
 			}
         }
