@@ -49,5 +49,12 @@ namespace Lab_3___Invaders
 
 		}
 
-	}
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LeaderBoardForm leaderBoardForm = new LeaderBoardForm();
+			leaderBoardForm.Closed += (s, args) => this.Close();
+            leaderBoardForm.Show();
+        }
+    }
 }

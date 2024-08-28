@@ -11,7 +11,6 @@ namespace Lab_3___Invaders
     {
         private const int horizontalInterval = 10;
         private const int verticalInterval = 30;
-
         private Bitmap image;
         private Bitmap[] imageArray;
 

@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\PRO250\\Lab-3---Invaders\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\PRO250\\Lab-3---Invaders\\Lab 3 - Invaders\\LeaderBoardForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Lab 3 - Invaders\\LeaderBoardForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{908DD367-E004-45CF-A91B-04AE44B65C15}|Lab 3 - Invaders\\Lab 3 - Invaders.csproj|c:\\pro250\\lab-3---invaders\\lab 3 - invaders\\leaderboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{908DD367-E004-45CF-A91B-04AE44B65C15}|Lab 3 - Invaders\\Lab 3 - Invaders.csproj|solutionrelative:lab 3 - invaders\\leaderboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\PRO250\\Lab-3---Invaders\\lab 3 - invaders\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:lab 3 - invaders\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{908DD367-E004-45CF-A91B-04AE44B65C15}|Lab 3 - Invaders\\Lab 3 - Invaders.csproj|c:\\pro250\\lab-3---invaders\\lab 3 - invaders\\invader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{908DD367-E004-45CF-A91B-04AE44B65C15}|Lab 3 - Invaders\\Lab 3 - Invaders.csproj|solutionrelative:lab 3 - invaders\\invader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\PRO250\\Lab-3---Invaders\\Lab 3 - Invaders\\Game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Lab 3 - Invaders\\Game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{908DD367-E004-45CF-A91B-04AE44B65C15}|Lab 3 - Invaders\\Lab 3 - Invaders.csproj|c:\\pro250\\lab-3---invaders\\lab 3 - invaders\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{908DD367-E004-45CF-A91B-04AE44B65C15}|Lab 3 - Invaders\\Lab 3 - Invaders.csproj|solutionrelative:lab 3 - invaders\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\PRO250\\Lab-3---Invaders\\Lab 3 - Invaders\\LeaderBoardForm.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Lab 3 - Invaders\\LeaderBoardForm.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{908DD367-E004-45CF-A91B-04AE44B65C15}|Lab 3 - Invaders\\Lab 3 - Invaders.csproj|c:\\pro250\\lab-3---invaders\\lab 3 - invaders\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{908DD367-E004-45CF-A91B-04AE44B65C15}|Lab 3 - Invaders\\Lab 3 - Invaders.csproj|solutionrelative:lab 3 - invaders\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\PRO250\\Lab-3---Invaders\\Lab 3 - Invaders\\LeaderBoardForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Lab 3 - Invaders\\LeaderBoardForm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{908DD367-E004-45CF-A91B-04AE44B65C15}|Lab 3 - Invaders\\Lab 3 - Invaders.csproj|c:\\pro250\\lab-3---invaders\\lab 3 - invaders\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{908DD367-E004-45CF-A91B-04AE44B65C15}|Lab 3 - Invaders\\Lab 3 - Invaders.csproj|solutionrelative:lab 3 - invaders\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,55 +30,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "LeaderBoardForm.Designer.cs",
-              "DocumentMoniker": "C:\\PRO250\\Lab-3---Invaders\\Lab 3 - Invaders\\LeaderBoardForm.Designer.cs",
-              "RelativeDocumentMoniker": "Lab 3 - Invaders\\LeaderBoardForm.Designer.cs",
-              "ToolTip": "C:\\PRO250\\Lab-3---Invaders\\Lab 3 - Invaders\\LeaderBoardForm.Designer.cs",
-              "RelativeToolTip": "Lab 3 - Invaders\\LeaderBoardForm.Designer.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAgwDkAAAAkAAAA",
+              "Title": "HomePage.cs",
+              "DocumentMoniker": "C:\\PRO250\\Lab-3---Invaders\\Lab 3 - Invaders\\HomePage.cs",
+              "RelativeDocumentMoniker": "Lab 3 - Invaders\\HomePage.cs",
+              "ToolTip": "C:\\PRO250\\Lab-3---Invaders\\Lab 3 - Invaders\\HomePage.cs",
+              "RelativeToolTip": "Lab 3 - Invaders\\HomePage.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAwDUAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T01:14:34.955Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LeaderBoardForm.cs",
-              "DocumentMoniker": "C:\\PRO250\\Lab-3---Invaders\\Lab 3 - Invaders\\LeaderBoardForm.cs",
-              "RelativeDocumentMoniker": "Lab 3 - Invaders\\LeaderBoardForm.cs",
-              "ToolTip": "C:\\PRO250\\Lab-3---Invaders\\Lab 3 - Invaders\\LeaderBoardForm.cs",
-              "RelativeToolTip": "Lab 3 - Invaders\\LeaderBoardForm.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAQwBIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T01:14:34.971Z",
+              "WhenOpened": "2024-08-28T01:25:39.558Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LeaderBoardForm.cs [Design]",
-              "DocumentMoniker": "C:\\PRO250\\Lab-3---Invaders\\Lab 3 - Invaders\\LeaderBoardForm.cs",
-              "RelativeDocumentMoniker": "Lab 3 - Invaders\\LeaderBoardForm.cs",
-              "ToolTip": "C:\\PRO250\\Lab-3---Invaders\\Lab 3 - Invaders\\LeaderBoardForm.cs [Design]",
-              "RelativeToolTip": "Lab 3 - Invaders\\LeaderBoardForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T01:14:35.081Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\PRO250\\Lab-3---Invaders\\Lab 3 - Invaders\\Form1.cs",
-              "RelativeDocumentMoniker": "Lab 3 - Invaders\\Form1.cs",
-              "ToolTip": "C:\\PRO250\\Lab-3---Invaders\\Lab 3 - Invaders\\Form1.cs [Design]",
-              "RelativeToolTip": "Lab 3 - Invaders\\Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T01:14:35.083Z"
             },
             {
               "$type": "Document",
@@ -88,9 +53,47 @@
               "RelativeDocumentMoniker": "Lab 3 - Invaders\\Game.cs",
               "ToolTip": "C:\\PRO250\\Lab-3---Invaders\\Lab 3 - Invaders\\Game.cs",
               "RelativeToolTip": "Lab 3 - Invaders\\Game.cs",
-              "ViewState": "AQIAAOgAAAAAAAAAAAAqwP8AAAA/AAAA",
+              "ViewState": "AQIAAIsBAAAAAAAAAAAUwJcBAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-23T01:14:35.085Z"
+              "WhenOpened": "2024-08-28T01:23:50.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Invader.cs",
+              "DocumentMoniker": "C:\\PRO250\\Lab-3---Invaders\\Lab 3 - Invaders\\Invader.cs",
+              "RelativeDocumentMoniker": "Lab 3 - Invaders\\Invader.cs",
+              "ToolTip": "C:\\PRO250\\Lab-3---Invaders\\Lab 3 - Invaders\\Invader.cs",
+              "RelativeToolTip": "Lab 3 - Invaders\\Invader.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAgwAEAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T01:15:04.367Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LeaderBoardForm.cs [Design]",
+              "DocumentMoniker": "C:\\PRO250\\Lab-3---Invaders\\Lab 3 - Invaders\\LeaderBoardForm.cs",
+              "RelativeDocumentMoniker": "Lab 3 - Invaders\\LeaderBoardForm.cs",
+              "ToolTip": "C:\\PRO250\\Lab-3---Invaders\\Lab 3 - Invaders\\LeaderBoardForm.cs [Design]*",
+              "RelativeToolTip": "Lab 3 - Invaders\\LeaderBoardForm.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T01:13:58.609Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomePage.cs [Design]",
+              "DocumentMoniker": "C:\\PRO250\\Lab-3---Invaders\\Lab 3 - Invaders\\HomePage.cs",
+              "RelativeDocumentMoniker": "Lab 3 - Invaders\\HomePage.cs",
+              "ToolTip": "C:\\PRO250\\Lab-3---Invaders\\Lab 3 - Invaders\\HomePage.cs [Design]",
+              "RelativeToolTip": "Lab 3 - Invaders\\HomePage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-28T01:12:28.113Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
