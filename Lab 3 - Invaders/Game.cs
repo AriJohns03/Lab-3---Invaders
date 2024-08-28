@@ -392,6 +392,7 @@ namespace Lab_3___Invaders
                 return false;
             }
         }
+
         private void nextWave()
         {
             wave++;
@@ -410,10 +411,7 @@ namespace Lab_3___Invaders
             }
             else
             {
-
                 // if the wave is under 7, set frames skipped to 6 - current wave number
-
-
                 int currentInvaderYSpace = 0;
                 // Double For Loop to create and add Space Invaders
                 for (int x = 0; x < 5; x++)
@@ -445,11 +443,6 @@ namespace Lab_3___Invaders
                     }
                 }
             }
-        }
-
-        public void ShowLeaderboard (){
-
-
         }
 
         public void BossWave()

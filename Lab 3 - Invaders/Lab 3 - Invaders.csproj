@@ -187,6 +187,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Boss.png" />
+    <Content Include="Resources\cuttleFishPt1.png" />
+    <Content Include="Resources\cuttleFishPt2.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bomber2.png" />
