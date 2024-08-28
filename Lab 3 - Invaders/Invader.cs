@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Drawing;
 using System.Windows.Forms;
+using Microsoft.Win32.SafeHandles;
 
 namespace Lab_3___Invaders
 {
@@ -12,8 +13,17 @@ namespace Lab_3___Invaders
         private const int horizontalInterval = 10;
         private const int verticalInterval = 30;
 
+        private const int verticalAttack = 10;
+        private const int horizontalAttack = 10;
+
         private Bitmap image;
         private Bitmap[] imageArray;
+
+        private string side = "";
+        private bool targeting = false;
+        private int playerLoc = 0;
+
+        private bool hitSide = false;
 
         public Point Location { get; private set; }
 
@@ -39,6 +49,11 @@ namespace Lab_3___Invaders
             image = imageArray[0];
         }
 
+        public void setdSide(string side)
+        {
+            this.side = side;
+        }
+
         public void Move(Direction direction)
         {
             switch (direction)
@@ -55,6 +70,54 @@ namespace Lab_3___Invaders
                     break;
             }
 
+        }
+
+        public void Attack(int formWidth, int playerLocationY, int playerLocationX)
+        {
+            if (side == "Left")
+            {
+                if (this.targeting == false)
+                {
+                    this.playerLoc = playerLocationX;
+                    this.targeting = true;
+                }
+
+                if (Location.Y > playerLocationY)
+                {
+                    return;
+                }
+
+                //&Location.X != playerLocationX
+
+                if (Location.X > -60 & hitSide != true)
+                {
+                    Location = new Point((Location.X - horizontalInterval), Location.Y);
+                    if (Location.X < -50)
+                    {
+                        hitSide = true;
+                    }
+                    //Location = new Point(Location.X, (Location.Y + verticalInterval));
+                }
+
+                if (hitSide == true)
+                {
+                    Location = new Point(Location.X, (Location.Y + verticalAttack));
+                    Location = new Point((Location.X + horizontalAttack), Location.Y);
+                }
+
+                //if (Location.Y > 100)
+                //{
+                //    Location = new Point(Location.X, (Location.Y - verticalInterval));
+                //}
+
+
+
+            }
+
+            if (side == "Right")
+            {
+                Location = new Point((Location.X + horizontalInterval), Location.Y);
+            }
         }
 
         public Graphics Draw(Graphics graphics, int animationCell)
@@ -116,6 +179,12 @@ namespace Lab_3___Invaders
                     imageArray[1] = Properties.Resources.bomber2;
                     imageArray[2] = Properties.Resources.bomber2;
                     imageArray[3] = Properties.Resources.bomber2;
+                    break;
+                case ShipType.Dropper:
+                    imageArray[0] = Properties.Resources.spaceship1;
+                    imageArray[1] = Properties.Resources.spaceship1;
+                    imageArray[2] = Properties.Resources.spaceship1;
+                    imageArray[3] = Properties.Resources.spaceship1;
                     break;
             }
         }

@@ -138,6 +138,14 @@ namespace Lab_3___Invaders
                 foreach (Shot shot in deadInvaderShots)
                     invaderShots.Remove(shot);
 
+                foreach(Invader dropper in invaders)
+                {
+                    if (dropper.InvaderType == ShipType.Dropper)
+                    {
+                        dropper.Attack(formArea.Width, playerShip.Location.Y, playerShip.Location.X);
+                    }
+                }
+
                 moveInvaders();
                 returnFire();
                 checkForCollisions();
@@ -160,7 +168,7 @@ namespace Lab_3___Invaders
                 {
                     var edgeInvaders =
                         from invader in invaders
-                        where invader.Location.X > (formArea.Width - 100)
+                        where invader.Location.X > (formArea.Width - 100) & invader.InvaderType != ShipType.Dropper
                         select invader;
                     if (edgeInvaders.Count() > 0)
                     {
@@ -179,7 +187,7 @@ namespace Lab_3___Invaders
                 {
                     var edgeInvaders =
                         from invader in invaders
-                        where invader.Location.X < 100
+                        where invader.Location.X < 100 & invader.InvaderType != ShipType.Dropper
                         select invader;
                     if (edgeInvaders.Count() > 0)
                     {
@@ -197,7 +205,7 @@ namespace Lab_3___Invaders
                 // Check to see if invaders have made it to the bottom
                 var endInvaders =
                         from invader in invaders
-                        where invader.Location.Y > playerShip.Location.Y
+                        where invader.Location.Y > playerShip.Location.Y & invader.InvaderType != ShipType.Dropper
                         select invader;
                 if (endInvaders.Count() > 0)
                 {
@@ -352,6 +360,7 @@ namespace Lab_3___Invaders
                 int currentInvaderXSpace = 0;
                 for (int y = 0; y < 5; y++)
                 {
+                    string side = "";
                     currentInvaderXSpace += invaderXSpacing;
                     Point newInvaderPoint =
                         new Point(currentInvaderXSpace, currentInvaderYSpace);
@@ -362,13 +371,28 @@ namespace Lab_3___Invaders
                     if(currentInvaderType == ShipType.Star & y == 0)
                     {
                         currentInvaderType = ShipType.Bomber;
+                        
                     }
                     if (currentInvaderType == ShipType.Star & y == 4)
                     {
                         currentInvaderType = ShipType.Bomber;
+                        
+                    }
+
+                    //Adding the Droopers on the sides
+                    if(currentInvaderType == ShipType.Satellite & y == 0)
+                    {
+                        currentInvaderType = ShipType.Dropper;
+                        side = "Left";
+                    }
+                    if(currentInvaderType == ShipType.Satellite & y == 4 )
+                    {
+                        currentInvaderType = ShipType.Dropper;
+                        side = "Right";
                     }
                     Invader newInvader =
                         new Invader(currentInvaderType, newInvaderPoint, 10);
+                    newInvader.setdSide(side);
                     currentInvaderType = (ShipType)x;
                     invaders.Add(newInvader);
                 }
