@@ -29,6 +29,23 @@ namespace Lab_3___Invaders.Tests
             Assert.AreEqual(false, g.isBossWave(7));
         }
 
+        [TestMethod]
+        public void TestBomberCreation()
+        {
+            Game g = new Game(random, FormArea);
+            List<Invader> invaders = new List<Invader>();
+            invaders = g.ReturnInvaders();
+            bool containsBomber = false;
+            foreach (Invader invader in invaders)
+            {
+                if (invader.InvaderType == ShipType.Bomber)
+                {
+                    containsBomber = true;
+                }
+            }
+            Assert.AreEqual(true, containsBomber);
+        }
+
 
     }
 }
