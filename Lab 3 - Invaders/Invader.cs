@@ -82,10 +82,10 @@ namespace Lab_3___Invaders
                     this.targeting = true;
                 }
 
-                if (Location.Y > playerLocationY)
-                {
-                    return;
-                }
+                //if (Location.Y > playerLocationY)
+                //{
+                //    return;
+                //}
 
                 //&Location.X != playerLocationX
 
@@ -113,7 +113,31 @@ namespace Lab_3___Invaders
 
             if (side == "Right")
             {
-                Location = new Point((Location.X + horizontalInterval), Location.Y);
+
+                if (this.targeting == false)
+                {
+                    this.playerLoc = playerLocationX;
+                    this.targeting = true;
+                }
+                
+                if (Location.X < 850 & hitSide != true)
+                {
+                    Location = new Point((Location.X + horizontalInterval), Location.Y);
+                    if (Location.X > 800)
+                    {
+                        hitSide = true;
+                    }
+                    //Location = new Point(Location.X, (Location.Y + verticalInterval));
+                }
+
+                if (hitSide == true)
+                {
+                    Location = new Point(Location.X, (Location.Y + verticalAttack));
+                    Location = new Point((Location.X - horizontalAttack), Location.Y);
+                }
+
+
+
             }
         }
 

@@ -174,12 +174,25 @@ namespace Lab_3___Invaders
                     {
                         invaderDirection = Direction.Left;
                         foreach (Invader invader in invaders)
+                        {
+                            if (invader.InvaderType == ShipType.Dropper)
+                            {
+                                continue;
+                            }
                             invader.Move(Direction.Down);
+                        }
                     }
                     else
                     {
                         foreach (Invader invader in invaders)
+                        {
+                            if (invader.InvaderType == ShipType.Dropper)
+                            {
+                                continue;
+                            }
                             invader.Move(Direction.Right);
+                        }
+                            
                     }
                 }
 
@@ -193,12 +206,26 @@ namespace Lab_3___Invaders
                     {
                         invaderDirection = Direction.Right;
                         foreach (Invader invader in invaders)
+                        {
+                            if (invader.InvaderType == ShipType.Dropper)
+                            {
+                                continue;
+                            }
                             invader.Move(Direction.Down);
+                        }
+                            
                     }
                     else
                     {
                         foreach (Invader invader in invaders)
+                        {
+                            if (invader.InvaderType == ShipType.Dropper)
+                            {
+                                continue;
+                            }
                             invader.Move(Direction.Left);
+                        }
+                            
                     }
                 }
 
@@ -339,16 +366,22 @@ namespace Lab_3___Invaders
                 invaderShots.Add(bombShot);
             }
 
+            List<Invader> bombedInvaders = new List<Invader>();
             foreach (Invader invaderAttack in invaders)
             {
                 if (playerShip.Area.Contains(invaderAttack.Location))
                 {
-                    
+                    bombedInvaders.Add(invaderAttack);
                     livesLeft--;
                     playerShip.Alive = false;
                     if (livesLeft == 0)
                         GameOver(this, null);
                 }
+                
+            }
+            foreach (Invader invaderAttack in bombedInvaders)
+            {
+                invaders.Remove(invaderAttack);
             }
 
         }
