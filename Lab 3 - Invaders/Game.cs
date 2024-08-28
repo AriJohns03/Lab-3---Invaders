@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Drawing;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Lab_3___Invaders
 {
@@ -19,6 +20,7 @@ namespace Lab_3___Invaders
         private int wave = 0;
         private int framesSkipped = 6;
         private int currentGameFrame = 1;
+        private int bossHealth = 10;
 
         private Direction invaderDirection;
         private List<Invader> invaders;
@@ -166,7 +168,15 @@ namespace Lab_3___Invaders
                     {
                         invaderDirection = Direction.Left;
                         foreach (Invader invader in invaders)
-                            invader.Move(Direction.Down);
+                            if (invader.InvaderType == ShipType.TheBoss)
+                            {
+                                invader.Move(Direction.Left);
+                            }
+                            else
+                            {
+                                invader.Move(Direction.Down);
+                            }
+                        
                     }
                     else
                     {
@@ -177,6 +187,7 @@ namespace Lab_3___Invaders
 
                 if (invaderDirection == Direction.Left)
                 {
+                    bool timeToSpawn = false;
                     var edgeInvaders =
                         from invader in invaders
                         where invader.Location.X < 100
@@ -185,8 +196,25 @@ namespace Lab_3___Invaders
                     {
                         invaderDirection = Direction.Right;
                         foreach (Invader invader in invaders)
-                            invader.Move(Direction.Down);
-                    }
+							if (invader.InvaderType == ShipType.TheBoss)
+							{
+                                
+                                timeToSpawn = true;
+                                
+								invader.Move(Direction.Left);
+							}
+							else
+							{
+								invader.Move(Direction.Down);
+							}
+                        if (timeToSpawn == true)
+                        {
+							Point newInvaderPoint =
+								new Point(100, 200);
+							Invader spawn = new Invader(ShipType.Bomber, newInvaderPoint, 10);
+							invaders.Add(spawn);
+						}
+					}
                     else
                     {
                         foreach (Invader invader in invaders)
@@ -275,6 +303,9 @@ namespace Lab_3___Invaders
                     // Checking for collision when the bomb explodes
                     if (playerShip.Area.Contains(shot.Location.X + shot.bombWidth, shot.Location.Y) || playerShip.Area.Contains(shot.Location.X - (shot.bombWidth / 2) + 15, shot.Location.Y))
                     {
+
+                        //TESTING TESTING
+
                         deadInvaderShots.Add(shot);
 
                         livesLeft--;
@@ -308,10 +339,29 @@ namespace Lab_3___Invaders
                 {
                     if (invader.Area.Contains(shot.Location))
                     {
-                        deadInvaders.Add(invader);
-                        deadInvaderShots.Add(shot);
-                        // Score multiplier based on wave
-                        score = score + (1 * wave);
+                        if(!(invader.InvaderType == ShipType.TheBoss))
+                        {
+							deadInvaders.Add(invader);
+							deadInvaderShots.Add(shot);
+							// Score multiplier based on wave
+							score = score + (1 * wave);
+                        }
+                        else
+                        {
+                            if(bossHealth == 0)
+                            {
+                                deadInvaders.Add(invader);
+								deadInvaderShots.Add(shot);
+								score = score + (50 * wave);
+								bossHealth = 10;
+                            }
+                            else
+                            {
+                                bossHealth--;
+                                deadInvaderShots.Add(shot);
+                            }
+                        }
+                        
                     }
                 }
                 foreach (Invader invader in deadInvaders)
@@ -335,45 +385,77 @@ namespace Lab_3___Invaders
         {
             wave++;
             invaderDirection = Direction.Right;
-            // if the wave is under 7, set frames skipped to 6 - current wave number
-            if (wave < 7)
+
+			if (wave < 7)
+			{
+				framesSkipped = 6 - wave;
+			}
+			else
+				framesSkipped = 0;
+
+            if (wave % 2 == 0)
             {
-                framesSkipped = 6 - wave;
+                BossWave();
             }
             else
-                framesSkipped = 0;
-
-            int currentInvaderYSpace = 0;
-            // Double For Loop to create and add Space Invaders
-            for (int x = 0; x < 5; x++)
             {
-                ShipType currentInvaderType = (ShipType)x;
-                currentInvaderYSpace += invaderYSpacing;
-                int currentInvaderXSpace = 0;
-                for (int y = 0; y < 5; y++)
-                {
-                    currentInvaderXSpace += invaderXSpacing;
-                    Point newInvaderPoint =
-                        new Point(currentInvaderXSpace, currentInvaderYSpace);
-                    // Need to add more varied invader score values
-                    // Invaders have a hard code score value of 10
 
-                    // Adding the Bombers on the bottom part
-                    if(currentInvaderType == ShipType.Star & y == 0)
+                // if the wave is under 7, set frames skipped to 6 - current wave number
+
+
+                int currentInvaderYSpace = 0;
+                // Double For Loop to create and add Space Invaders
+                for (int x = 0; x < 5; x++)
+                {
+                    ShipType currentInvaderType = (ShipType)x;
+                    currentInvaderYSpace += invaderYSpacing;
+                    int currentInvaderXSpace = 0;
+                    for (int y = 0; y < 5; y++)
                     {
-                        currentInvaderType = ShipType.Bomber;
+                        currentInvaderXSpace += invaderXSpacing;
+                        Point newInvaderPoint =
+                            new Point(currentInvaderXSpace, currentInvaderYSpace);
+                        // Need to add more varied invader score values
+                        // Invaders have a hard code score value of 10
+
+                        // Adding the Bombers on the bottom part
+                        if (currentInvaderType == ShipType.Star & y == 0)
+                        {
+                            currentInvaderType = ShipType.Bomber;
+                        }
+                        if (currentInvaderType == ShipType.Star & y == 4)
+                        {
+                            currentInvaderType = ShipType.Bomber;
+                        }
+                        Invader newInvader =
+                            new Invader(currentInvaderType, newInvaderPoint, 10);
+                        currentInvaderType = (ShipType)x;
+                        invaders.Add(newInvader);
                     }
-                    if (currentInvaderType == ShipType.Star & y == 4)
-                    {
-                        currentInvaderType = ShipType.Bomber;
-                    }
-                    Invader newInvader =
-                        new Invader(currentInvaderType, newInvaderPoint, 10);
-                    currentInvaderType = (ShipType)x;
-                    invaders.Add(newInvader);
                 }
             }
         }
+
+        public void BossWave()
+        {
+			int currentInvaderYSpace = 0;
+
+			ShipType currentInvaderType = (ShipType)0;
+
+			currentInvaderYSpace += 0;
+			int currentInvaderXSpace = 100;
+
+			Point newInvaderPoint =
+						new Point(currentInvaderXSpace, currentInvaderYSpace);
+
+			currentInvaderType = ShipType.TheBoss;
+
+			Invader newInvader =
+						new Invader(currentInvaderType, newInvaderPoint, 100);
+			currentInvaderType = (ShipType)0;
+			invaders.Add(newInvader);
+		}
+
 
         public event EventHandler GameOver;
     }

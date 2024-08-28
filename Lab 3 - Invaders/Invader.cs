@@ -117,7 +117,13 @@ namespace Lab_3___Invaders
                     imageArray[2] = Properties.Resources.bomber2;
                     imageArray[3] = Properties.Resources.bomber2;
                     break;
-            }
+				case ShipType.TheBoss:
+					imageArray[0] = Properties.Resources.boss;
+					imageArray[1] = Properties.Resources.boss;
+					imageArray[2] = Properties.Resources.boss;
+					imageArray[3] = Properties.Resources.boss;
+					break;
+			}
         }
     }
 }
