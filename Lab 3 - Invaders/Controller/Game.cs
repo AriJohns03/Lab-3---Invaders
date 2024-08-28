@@ -513,6 +513,10 @@ namespace Lab_3___Invaders
 			invaders.Add(newInvader);
 		}
 
+        public List<Invader> ReturnInvaders()
+        {
+            return invaders;
+        }
 
         public event EventHandler GameOver;
     }
