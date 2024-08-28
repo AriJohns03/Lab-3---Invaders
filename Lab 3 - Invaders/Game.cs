@@ -149,6 +149,7 @@ namespace Lab_3___Invaders
                 moveInvaders();
                 returnFire();
                 checkForCollisions();
+                removeDropper();
                 if (invaders.Count < 1)
                 {
                     nextWave();
@@ -250,6 +251,22 @@ namespace Lab_3___Invaders
                 currentGameFrame = 1;
         }
 
+
+        private void removeDropper()
+        {
+            List<Invader> goneDroppers = new List<Invader>();
+            foreach(Invader invader in invaders)
+            {
+                if (invader.Location.Y > playerShip.Location.Y + 40)
+                {
+                    goneDroppers.Add(invader);
+                }
+            }
+            foreach(Invader dropper in goneDroppers)
+            {
+                invaders.Remove(dropper);
+            }
+        }
         private void returnFire()
         {
             //// invaders check their location and fire at the player
