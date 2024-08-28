@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Drawing;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Lab_3___Invaders
 {
@@ -19,6 +20,7 @@ namespace Lab_3___Invaders
         private int wave = 0;
         private int framesSkipped = 6;
         private int currentGameFrame = 1;
+        private int bossHealth = 10;
 
         private Direction invaderDirection;
         private List<Invader> invaders;
@@ -185,6 +187,7 @@ namespace Lab_3___Invaders
 
                 if (invaderDirection == Direction.Left)
                 {
+                    bool timeToSpawn = false;
                     var edgeInvaders =
                         from invader in invaders
                         where invader.Location.X < 100
@@ -195,12 +198,22 @@ namespace Lab_3___Invaders
                         foreach (Invader invader in invaders)
 							if (invader.InvaderType == ShipType.TheBoss)
 							{
+                                
+                                timeToSpawn = true;
+                                
 								invader.Move(Direction.Left);
 							}
 							else
 							{
 								invader.Move(Direction.Down);
 							}
+                        if (timeToSpawn == true)
+                        {
+							Point newInvaderPoint =
+								new Point(100, 200);
+							Invader spawn = new Invader(ShipType.Bomber, newInvaderPoint, 10);
+							invaders.Add(spawn);
+						}
 					}
                     else
                     {
@@ -326,10 +339,29 @@ namespace Lab_3___Invaders
                 {
                     if (invader.Area.Contains(shot.Location))
                     {
-                        deadInvaders.Add(invader);
-                        deadInvaderShots.Add(shot);
-                        // Score multiplier based on wave
-                        score = score + (1 * wave);
+                        if(!(invader.InvaderType == ShipType.TheBoss))
+                        {
+							deadInvaders.Add(invader);
+							deadInvaderShots.Add(shot);
+							// Score multiplier based on wave
+							score = score + (1 * wave);
+                        }
+                        else
+                        {
+                            if(bossHealth == 0)
+                            {
+                                deadInvaders.Add(invader);
+								deadInvaderShots.Add(shot);
+								score = score + (50 * wave);
+								bossHealth = 10;
+                            }
+                            else
+                            {
+                                bossHealth--;
+                                deadInvaderShots.Add(shot);
+                            }
+                        }
+                        
                     }
                 }
                 foreach (Invader invader in deadInvaders)
@@ -349,6 +381,17 @@ namespace Lab_3___Invaders
             }
         }
 
+        public bool isBossWave(int currentWave)
+        {
+            if (currentWave % 2 == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         private void nextWave()
         {
             wave++;
@@ -361,7 +404,7 @@ namespace Lab_3___Invaders
 			else
 				framesSkipped = 0;
 
-            if (wave % 2 == 0)
+            if (isBossWave(wave))
             {
                 BossWave();
             }
