@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -15,8 +16,10 @@ namespace Lab_3___Invaders
         private Rectangle formArea;
         private Random random;
 
+        private bool scoreSaved = false;
+
         private int score = 0;
-        private int livesLeft = 5;
+        private int livesLeft = 1;
         private int wave = 0;
         private int framesSkipped = 6;
         private int currentGameFrame = 1;
@@ -81,9 +84,51 @@ namespace Lab_3___Invaders
             {
                 graphics.DrawString("GAME OVER", messageFont, Brushes.Red,
                     (formArea.Width / 4), formArea.Height / 3);
+
+                if (!scoreSaved)
+                {
+                    List<string> topPlayers = File.ReadAllLines("C:\\Users\\jjanzig\\source\\repos\\ExistingCode\\Lab-3---Invaders\\Lab 3 - Invaders\\Leaderboard\\LeadeBoard.txt").ToList();
+                    topPlayers.Add("UserName: " + score);
+                    topPlayers.Sort();
+       
+                    File.WriteAllLines("C:\\Users\\jjanzig\\source\\repos\\ExistingCode\\Lab-3---Invaders\\Lab 3 - Invaders\\Leaderboard\\LeadeBoard.txt", topPlayers);
+                    scoreSaved = true;
+                }
+
+                //StreamWriter streamWriter = new StreamWriter("Leaderboard\\LeadeBoard.txt");
+
+                //streamWriter.WriteLine("UserName: " + score);
+                //String leaderboardPath = new Environment.GetFolderPath(Environment.SpecialFolder.Leader)
             }
 
         }
+
+        //public List<string> sortLeaderboard(List<string> playerList)
+        //{
+        //    List<int> ranking = new List<int>();
+        //    List<string> newRank = new List<string>();
+        //    foreach (string player in playerList)
+        //    {
+        //        string[] parts = player.Split(' ');
+        //        int highScore = int.Parse(parts[1]);
+        //        ranking.Add(highScore);
+        //    }
+        //    ranking.Sort();
+
+        //    for (int i = ranking.Count, j = 0; i > 0; i--, j++)
+        //    {
+        //        if (playerList[j].Contains(ranking[i] + ""))
+        //        {
+        //            newRank.Add(playerList[j]);
+        //        }
+        //        else
+        //        {
+        //            newRank.Add(playerList[i]);
+        //        }
+        //    }
+        //    return newRank;
+
+        //}
 
         // Twinkle (animates stars) is called from the form animation timer
         public void Twinkle()
@@ -472,6 +517,10 @@ namespace Lab_3___Invaders
 			invaders.Add(newInvader);
 		}
 
+        public List<Invader> ReturnInvaders()
+        {
+            return invaders;
+        }
 
         public event EventHandler GameOver;
     }
