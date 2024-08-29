@@ -1,3 +1,1 @@
-Me: 100000
-Other: 20
-UserName: 1
+UserName: 3
